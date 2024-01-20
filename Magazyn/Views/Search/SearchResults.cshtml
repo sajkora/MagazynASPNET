@@ -1,0 +1,27 @@
+﻿@model List<Magazyn.Models.Item>
+
+<h2>Search Results</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Quantity</td>
+                <td>@item.Cost</td>
+                <td><img src="@item.Image" alt="Item image" style="width: 180px; height: 180px;" /></td>
+            </tr>
+        }
+    </tbody>
+</table>
